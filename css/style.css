@@ -1,0 +1,27 @@
+<!-- css/style.css -->
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2 {
+    color: #0d6efd;
+}
+
+p, ul {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+footer {
+    background-color: #f8f9fa;
+}
+
+.btn-success {
+    background-color: #25D366;
+    border-color: #25D366;
+}
+
+.btn-success:hover {
+    background-color: #1ebe5d;
+    border-color: #1ebe5d;
+}
