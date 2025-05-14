@@ -52,12 +52,5 @@ footer {
     border-color: #1ebe5d;
 }
 
-.navbar-brand::before {
-    content: url('../images/logo.png'); 
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    margin-right: 8px;
-}
 
 /* Prepare logo.png and favicon.ico in images folder */

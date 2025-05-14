@@ -1,50 +1,157 @@
-<!-- Code with Nono Portfolio Website -->
-<!-- Full Project -->
-<link rel="icon" href="images/favicon.ico" type="image/x-icon">
-<!-- index.html -->
+<!-- Code with Nono Portfolio Website FINAL MASTERPIECE -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Code with Nono</title>
+    <title>Code with Nour</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #000000;
+            --primary-color: #4eaaff;
+        }
+        body.dark-mode {
+            --bg-color: #0d1117;
+            --text-color: #c9d1d9;
+            --primary-color: #4eaaff;
+        }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Open Sans', sans-serif;
+        }
+        .navbar {
+            background: linear-gradient(135deg, #1e1e2f, #232323);
+        }
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        .profile-img {
+            max-width: 220px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        h2 i {
+            margin-right: 10px;
+            color: var(--primary-color);
+        }
+    </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">Code with Nono</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
-                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="testimonials.html">Success Stories</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                </ul>
-            </div>
+
+<nav class="navbar navbar-expand-lg navbar-dark shadow fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#hero">Code with Nour</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="#certificates">Certificates</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                <li class="nav-item"><button onclick="document.body.classList.toggle('dark-mode')" class="btn btn-sm btn-secondary">🌙</button></li>
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
+<div style="padding-top:70px"></div>
 
-    <header class="bg-primary text-white text-center py-5">
-        <div class="container">
-            <h1>Welcome to Code with Nono</h1>
-            <p>Empowering students to master coding and AI, creating passion</p>
-            <a href="courses.html" class="btn btn-light mt-3">Explore Courses</a>
+<section id="hero" style="background: linear-gradient(135deg, #4eaaff, #232323); color: white; text-align: center; padding: 100px 20px;">
+    <h1 class="display-4">Welcome to Code with Nono</h1>
+    <p class="lead">Empowering students to master coding and AI, creating passion</p>
+    <a href="#contact" class="btn btn-primary mt-4">Book Tutoring Session</a>
+</section>
+
+<section id="about" class="container py-5">
+    <h2><i class="fas fa-user"></i>About Me</h2>
+    <div class="row align-items-center">
+        <div class="col-md-6"><img src="images/Image2.jpg" alt="Nono" class="img-fluid rounded-circle profile-img"></div>
+        <div class="col-md-6">
+            <p>I am Nour Eldin, CS undergraduate & AI mentor. I help students succeed in coding, machine learning, data analysis, UI/UX design, real-world projects & more.</p>
         </div>
-    </header>
+    </div>
+</section>
 
-    <footer class="text-center py-4">
-        <p>Follow me on <a href="https://www.instagram.com/nourabulnasrr" target="_blank">Instagram</a> | <a href="https://github.com/nourabulnasr" target="_blank">GitHub</a></p>
-        <p>© 2025 Code with Nono. All rights reserved.</p>
-    </footer>
+<section id="services" class="container py-5 text-center">
+    <h2><i class="fas fa-cogs"></i>What I Offer</h2>
+    <div class="row">
+        <div class="col-md-4"><div class="card p-4">CS Tutoring<br><small>All university CS courses & projects</small></div></div>
+        <div class="col-md-4"><div class="card p-4">Project Mentorship<br><small>Data Science, AI, UI/UX</small></div></div>
+        <div class="col-md-4"><div class="card p-4">Interview Prep<br><small>DSA, Algorithms, ML help</small></div></div>
+    </div>
+</section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<section id="projects" class="container py-5">
+    <h2 class="text-center"><i class="fas fa-code"></i>Student Projects</h2>
+    <div class="row text-center">
+        <div class="col-6 col-md-3"><div class="card p-3">Web & App Dev</div></div>
+        <div class="col-6 col-md-3"><div class="card p-3">Vehicle Classifier</div></div>
+        <div class="col-6 col-md-3"><div class="card p-3">Quiz Platform</div></div>
+        <div class="col-6 col-md-3"><div class="card p-3">NLP Projects</div></div>
+        <div class="col-6 col-md-3"><div class="card p-3">Feature Extraction</div></div>
+        <div class="col-6 col-md-3"><div class="card p-3">YOLO Guns Detection</div></div>
+        <div class="col-6 col-md-3"><div class="card p-3">Loan Prediction</div></div>
+        <div class="col-6 col-md-3"><div class="card p-3">Hybrid ML Models</div></div>
+        <div class="col-6 col-md-3"><div class="card p-3">Price Prediction</div></div>
+        <div class="col-6 col-md-3"><div class="card p-3">Chatbot DL</div></div>
+        <div class="col-6 col-md-3"><div class="card p-3">Parking Classification</div></div>
+        <div class="col-6 col-md-3"><div class="card p-3">Malnutrition Detection</div></div>
+    </div>
+</section>
+
+<section id="certificates" class="container py-5 text-center">
+    <h2><i class="fas fa-certificate"></i>My Certificates</h2>
+    <div class="row">
+        <div class="col-md-3"><a href="images/CBAP certificate nour.pdf" target="_blank" class="btn btn-outline-primary">CBAP Certificate</a></div>
+        <div class="col-md-3"><a href="images/IBM's Machine Learning.pdf" target="_blank" class="btn btn-outline-primary">IBM ML Certificate</a></div>
+        <div class="col-md-3"><a href="images/Harvard's Machine Learning .pdf" target="_blank" class="btn btn-outline-primary">Harvard ML Certificate</a></div>
+        <div class="col-md-3"><a href="images/Internship Certificate.pdf" target="_blank" class="btn btn-outline-primary">Data Science Internship</a></div>
+        <div class="col-md-12 mt-3"><a href="images\Recommendation Letter.docx" target="_blank" class="btn btn-outline-primary">Download Recommendation Letter</a></div>
+    </div>
+</section>
+
+<section id="testimonials" class="container py-5 text-center">
+    <h2><i class="fas fa-comment-dots"></i>What My Students Say</h2>
+    <div id="testimonial-text">"Code with Nour helped me land my first real-world project!"</div>
+</section>
+<script>
+const testimonials = [
+    '"Code with Nour helped me land my first real-world project!"',
+    '"I finally understood DSA thanks to Nour\'s guidance."',
+    '"The CS mentorship improved my university grades!"'
+];
+let i = 0;
+setInterval(() => {
+    i = (i + 1) % testimonials.length;
+    document.getElementById('testimonial-text').textContent = testimonials[i];
+}, 4000);
+</script>
+
+<section id="contact" class="container py-5 text-center">
+    <h2><i class="fas fa-envelope"></i>Contact Me</h2>
+    <form action="https://formspree.io/f/myzwbodd" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required class="form-control mb-2">
+        <input type="email" name="email" placeholder="Your Email" required class="form-control mb-2">
+        <textarea name="message" placeholder="Your Message" required class="form-control mb-2"></textarea>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+    </form>
+</section>
+
+<a href="https://wa.me/201069046666" style="position:fixed;width:60px;height:60px;bottom:40px;right:40px;background:#25D366;color:#FFF;border-radius:50px;text-align:center;font-size:30px;box-shadow:2px 2px 3px #999;z-index:1000;">
+    <i style="margin-top:16px;">💬</i>
+</a>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
