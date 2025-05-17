@@ -1,40 +1,351 @@
-
-
-
-
-
-<!-- Code with Nono Portfolio Website FOUNDER'S FINAL V10 EDITION -->
+<!-- Code with Nono Portfolio Website FINAL TRUE FULL VERSION -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Code with Nour</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <style>
-        :root { --bg-color: #ffffff; --text-color: #000000; --primary-color: #4eaaff; }
-        body.dark-mode { --bg-color: #0d1117; --text-color: #c9d1d9; --primary-color: #4eaaff; }
-        body { background-color: var(--bg-color); color: var(--text-color); font-family: 'Open Sans', sans-serif; }
-        .navbar { background: linear-gradient(135deg, #1e1e2f, #232323); }
-        .btn-primary { background-color: var(--primary-color); border-color: var(--primary-color); transition: 0.3s; }
-        .btn-primary:hover { background-color: #369fd9; }
-        .profile-img { max-width: 220px; display: block; margin: auto; }
-        h2 i { margin-right: 10px; color: var(--primary-color); }
-        .card { transition: transform 0.3s ease; }
-        .card:hover { transform: scale(1.03); }
-        .toggle-switch { position: relative; width: 100px; height: 50px; }
-        .switch-label { position: absolute; width: 100%; height: 50px; background-color: #28292c; border-radius: 25px; cursor: pointer; border: 3px solid #28292c; }
-        .checkbox { position: absolute; display: none; }
-        .slider { position: absolute; width: 100%; height: 100%; border-radius: 25px; transition: 0.3s; }
-        .checkbox:checked ~ .slider { background-color: #d8dbe0; }
-        .slider::before { content: ""; position: absolute; top: 10px; left: 10px; width: 25px; height: 25px; border-radius: 50%; box-shadow: inset 12px -4px 0px 0px #d8dbe0; background-color: #28292c; transition: 0.3s; }
-        .checkbox:checked ~ .slider::before { transform: translateX(50px); background-color: #28292c; box-shadow: none; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Code with Nour</title>
+<!-- ✅ STEP 9: SEO + Social Metadata -->
+<meta name="description" content="Code with Nono — CS tutoring & AI mentorship platform by Nour Eldin. Learn coding, machine learning, and real-world project skills.">
+<meta name="keywords" content="CS tutoring, AI mentor, machine learning, code with nono, Nour Abulnasr, student projects, programming help">
+<meta name="author" content="Nour Abulnasr">
+
+<!-- Open Graph (Facebook & LinkedIn preview) -->
+<meta property="og:title" content="Code with Nour – Learn, Code, Succeed">
+<meta property="og:description" content="CS tutoring, AI mentorship, and project support with Nour Eldin.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nourabulnasr.github.io">
+<meta property="og:image" content="images/Image2.jpg">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Code with Nour – CS & AI Tutoring by Nour Eldin">
+<meta name="twitter:description" content="Helping students master coding, AI, and real-world tech projects.">
+<meta name="twitter:image" content="images/Image2.jpg">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+<style>
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --card-bg: #ffffff;
+  --input-bg: #f8f9fa;
+  --primary-color: #4eaaff;
+}
+
+body.dark-mode {
+  --bg-color: #0d1117;
+  --text-color: #e4e6eb;
+  --card-bg: #161b22;
+  --input-bg: #0f131a;
+  --primary-color: #4eaaff;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Open Sans', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card, .navbar, footer, section {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+input, textarea, select {
+  background-color: var(--input-bg);
+  color: var(--text-color);
+  border: 1px solid #444;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar { background: linear-gradient(135deg, #1e1e2f, #232323); }
+.btn-primary { background-color: var(--primary-color); border-color: var(--primary-color); transition: 0.3s; }
+.btn-primary:hover { background-color: #369fd9; }
+.profile-img { max-width: 220px; display: block; margin: auto; }
+h2 i { margin-right: 10px; color: var(--primary-color); }
+.card { transition: transform 0.3s ease; }
+.card:hover { transform: scale(1.05); box-shadow: 0 8px 18px rgba(78, 170, 255, 0.4); }
+.toggle-switch { position: relative; width: 100px; height: 50px; }
+.switch-label { position: absolute; width: 100%; height: 50px; background-color: #28292c; border-radius: 25px; cursor: pointer; border: 3px solid #28292c; }
+.checkbox { position: absolute; display: none; }
+.slider { position: absolute; width: 100%; height: 100%; border-radius: 25px; transition: 0.3s; }
+.checkbox:checked ~ .slider { background-color: #d8dbe0; }
+.slider::before { content: ""; position: absolute; top: 10px; left: 10px; width: 25px; height: 25px; border-radius: 50%; box-shadow: inset 12px -4px 0px 0px #d8dbe0; background-color: #28292c; transition: 0.3s; }
+.checkbox:checked ~ .slider::before { transform: translateX(50px); background-color: #28292c; box-shadow: none; }
+
+@media (max-width: 576px) {
+  #hero h1.display-4 { font-size: 2rem; }
+  #hero p.lead { font-size: 1rem; }
+  .profile-img { max-width: 150px; }
+  a[href*="wa.me"] { bottom: 20px !important; right: 20px !important; }
+}
+@media (max-width: 767px) {
+  #services .row > div, #projects .row > div {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+
+.navbar-nav { text-align: center; }
+
+.card1, .card2, .card3, .card4 {
+  width: 90px;
+  height: 90px;
+  outline: none;
+  border: none;
+  background: white;
+  border-radius: 25px;
+  box-shadow: rgba(50,50,93,0.25) 0px 2px 5px -1px,
+              rgba(0,0,0,0.3) 0px 1px 3px -1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s ease-in-out;
+}
+.card1:hover, .card2:hover, .card3:hover, .card4:hover {
+  cursor: pointer;
+  transform: scale(1.15);
+  box-shadow: 0 8px 18px rgba(78,170,255,0.4);
+}
+.card1 i { color: #cc39a4; }
+.card2 i { color: #03A9F4; }
+.card3 i { color: black; }
+.card4 i { color: #8c9eff; }
+
+.main a { text-decoration: none !important; }
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #4eaaff !important;
+  text-shadow: 0 0 8px #4eaaff;
+}
+
+.profile-img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 160px; /* or try 140px if you want it even smaller */
+  display: block;
+  margin: auto
+}
+.profile-img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 18px rgba(78,170,255,0.4);
+}
+
+/* Floating Social Media Bar */
+.floating-social {
+  position: fixed;
+  top: 40%;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 999;
+}
+.floating-social a {
+  width: 50px;
+  height: 50px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.floating-social a:hover {
+  transform: scale(1.2);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+}
+.floating-social i {
+  font-size: 24px;
+}
+
+.navbar-nav .nav-link.active {
+  color: #4eaaff !important;
+  text-shadow: 0 0 8px #4eaaff;
+  font-weight: bold;
+}
+
+.scroll-down-btn {
+  font-size: 2.5rem;
+  color: white;
+  animation: bounce 2s infinite;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+.scroll-down-btn:hover {
+  transform: scale(1.2);
+  color: #a7dfff;
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(10px); }
+  60% { transform: translateY(5px); }
+}
+
+.parallax-hero,
+.parallax-section {
+  background-image: url('images/Background1.jpeg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.parallax-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(6px);
+  padding: 100px 20px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 700px;
+  color: white;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px),
+@media only screen and (max-device-width: 768px) {
+  .parallax-section {
+    background-attachment: scroll;
+  }
+}
+
+.timeline {
+  list-style: none;
+  padding-left: 20px;
+  border-left: 3px solid #4eaaff;
+  margin: 40px 0;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.timeline li {
+  position: relative;
+  margin: 20px 0;
+  padding-left: 20px;
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+.timeline li::before {
+  content: '';
+  position: absolute;
+  left: -11px;
+  top: 5px;
+  width: 15px;
+  height: 15px;
+  background-color: #4eaaff;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 0 0 3px rgba(78, 170, 255, 0.3);
+}
+
+.timeline li span {
+  font-weight: bold;
+  color: #4eaaff;
+  display: block;
+  margin-bottom: 5px;
+}
+
+#preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  background: #0d1117;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader {
+  width: 60px;
+  height: 60px;
+  border: 6px solid #4eaaff;
+  border-top: 6px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0); }
+  100% { transform: rotate(360deg); }
+}
+
+.footer {
+  background: #1e1e2f;
+  color: white;
+  font-size: 0.9rem;
+  border-top: 1px solid #4eaaff;
+}
+
+.footer a {
+  color: #4eaaff;
+  margin: 0 8px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #ffffff;
+}
+
+.footer-icons a {
+  font-size: 1.2rem;
+  margin: 0 10px;
+  color: #4eaaff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+#hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+
+</style>
+<!-- ✅ LIVE Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F9L738N5YL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-F9L738N5YL');
+</script>
+
 </head>
-<body>
+<body data-bs-spy="scroll" data-bs-target="#navbarNav" data-bs-offset="70" tabindex="0">
+  <div id="preloader">
+  <div class="loader"></div>
+</div>
 
 <nav class="navbar navbar-expand-lg navbar-dark shadow fixed-top">
     <div class="container">
@@ -62,50 +373,118 @@
         </div>
     </div>
 </nav>
+<div id="navbar-placeholder"></div>
+
+
 <div style="padding-top:70px"></div>
 
-<section id="hero" style="background: linear-gradient(135deg, #4eaaff, #232323); color: white; text-align: center; padding: 100px 20px;">
+<section id="hero" class="parallax-section">
+  <div class="parallax-overlay">
     <h1 class="display-4">Welcome to Code with Nour</h1>
     <p class="lead">Empowering students to master coding and AI, creating passion</p>
     <a href="#contact" class="btn btn-primary mt-4">Book Tutoring Session</a>
+          </a>
+  </div>
 </section>
 
-<section id="about" class="container py-5">
+
+</section>
+
+
+<!-- ✅ STEP 10: Student Subscription Form -->
+<section id="subscribe" class="container py-5 text-center" data-aos="fade-up">
+    <h2><i class="fas fa-bell"></i> Stay Updated</h2>
+    <p class="mb-4">Enter your email or phone to receive updates and new content alerts.</p>
+    <form action="https://formspree.io/f/myzwbodd" method="POST" style="max-width: 500px; margin: auto;">
+        <!-- <input type="text" name="name" class="form-control mb-2" placeholder="Your Name"> -->
+        <input type="text" name="name" class="form-control mb-2" placeholder="Your Name" required>
+        <input type="email" name="email" class="form-control mb-2" placeholder="Your Email" required>
+        <input type="tel" name="phone" class="form-control mb-3" placeholder="Your Phone (optional)">
+        <button type="submit" class="btn btn-primary">Subscribe</button>
+    </form>
+</section>
+
+
+<!-- ✅ STEP 11: About Me Section -->
+<section id="about" class="container py-5" data-aos="fade-up">
     <h2><i class="fas fa-user"></i>About Me</h2>
     <div class="card p-4">
-        <img src="images/Image2.jpg" alt="Nono" class="img-fluid rounded-circle profile-img">
-        <p class="mt-3">I am Nour, CS undergraduate & AI mentor. I help students succeed numerous fields of coding, machine learning, data analysis, UI/UX design, real-world projects & more, Join me on this exciting journey.</p>
+        <img src="images/Image3.jpg" alt="Nono" class="img-fluid rounded-circle profile-img">
+        <p class="mt-3">I am Nour, CS undergraduate & mentor. I'm Trying to help students succeed in numerous fields of coding, machine learning, data analysis, UI/UX design, real-world projects & more. Join me on this exciting journey.</p>
     </div>
 </section>
 
-<section id="services" class="container py-5 text-center">
+<!-- ✅ STEP 12: Services Section -->
+<section id="services" class="container py-5 text-center" data-aos="fade-up">
     <h2><i class="fas fa-cogs"></i>What I Offer</h2>
     <div class="row">
         <div class="col-md-4"><div class="card p-4">CS Tutoring<br><small>All university CS courses & projects</small></div></div>
-        <div class="col-md-4"><div class="card p-4">Project Mentorship<br><small>Data Science, AI, UI/UX</small></div></div>
+        <div class="col-md-4"><div class="card p-4">Project Mentorship<br><small>Data Science, AI, UI/UX, OOP and more</small></div></div>
         <div class="col-md-4"><div class="card p-4">Interview Prep<br><small>DSA, Algorithms, ML help</small></div></div>
     </div>
 </section>
 
-<section id="projects" class="container py-5">
+<!-- ✅ STEP 13: Projects Section -->
+<section id="projects" class="container py-5" data-aos="fade-up">
     <h2 class="text-center"><i class="fas fa-code"></i>Student Projects</h2>
     <div class="row text-center">
-        <div class="col-6 col-md-3"><div class="card p-3">Web & App Dev</div></div>
-        <div class="col-6 col-md-3"><div class="card p-3">Vehicle Classifier</div></div>
-        <div class="col-6 col-md-3"><div class="card p-3">Quiz Platform</div></div>
-        <div class="col-6 col-md-3"><div class="card p-3">NLP Projects</div></div>
-        <div class="col-6 col-md-3"><div class="card p-3">Feature Extraction</div></div>
-        <div class="col-6 col-md-3"><div class="card p-3">YOLO Guns Detection</div></div>
-        <div class="col-6 col-md-3"><div class="card p-3">Loan Prediction</div></div>
-        <div class="col-6 col-md-3"><div class="card p-3">Hybrid ML Models</div></div>
-        <div class="col-6 col-md-3"><div class="card p-3">Price Prediction</div></div>
-        <div class="col-6 col-md-3"><div class="card p-3">Chatbot DL</div></div>
-        <div class="col-6 col-md-3"><div class="card p-3">Parking Classification</div></div>
-        <div class="col-6 col-md-3"><div class="card p-3">Malnutrition Detection</div></div>
+        <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="50"> <div class="card p-3">Web & App Dev</div></div>
+        <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="50"> <div class="card p-3">Vehicle Classifier</div></div>
+        <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="50"> <div class="card p-3">Interactive Learning and Quiz Platform</div></div>
+        <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="50"><div class="card p-3">NLP Projects</div></div>
+        <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="50"><div class="card p-3">Feature Extraction</div></div>
+        <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="50"><div class="card p-3">YOLO Guns Detection</div></div>
+        <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="50"><div class="card p-3">Loan Prediction</div></div>
+        <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="50"><div class="card p-3">Hybrid ML Models</div></div>
+        <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="50"><div class="card p-3">Price Prediction</div></div>
+        <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="50"><div class="card p-3">Chatbot DL</div></div>
+        <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="50"><div class="card p-3">Parking Lot Classification</div></div>
+        <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="50"><div class="card p-3">Malnutrition Detection</div></div>
     </div>
 </section>
 
-<section id="certificates" class="container py-5 text-center">
+
+<!-- ✅ STEP 14: Timeline Section -->
+<section id="timeline" class="container py-5" data-aos="fade-up">
+  <h2 class="text-center"><i class="fas fa-rocket"></i> My Learning Journey</h2>
+  <ul class="timeline">
+    <li><span>2022</span> Started coding with C++ and Java</li>
+    <li><span>2023</span> Built my first Game using Java and OOP</li>
+    <li><span>2024</span> Created real-world CS projects in AI, NLP, and Computer Vision</li>
+    <li><span>2025</span> Helped many students with their projects and CS courses at different universities</li>
+  
+  </ul>
+</section>
+
+
+<!-- ✅ STEP 15: Stats Section -->
+<section id="stats" class="container py-5 text-center" data-aos="fade-up">
+  <h2><i class="fas fa-chart-line"></i> My Impact</h2>
+  <div class="row">
+    <div class="col-md-3">
+      <h3><span class="counter" data-target="8">0</span>+</h3>
+      <p>Students Helped</p>
+    </div>
+    <div class="col-md-3">
+      <h3><span class="counter" data-target="19">0</span>+</h3>
+      <p>Projects Completed</p>
+    </div>
+    <div class="col-md-3">
+      <h3><span class="counter" data-target="26">0</span>+</h3>
+      <p>CS Courses Covered</p>
+    </div>
+    <div class="col-md-3">
+      <h3><span class="counter" data-target="9.0">0</span></h3>
+      <p>Average Rating</p>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<section id="certificates" class="container py-5 text-center" data-aos="fade-up">
     <h2><i class="fas fa-certificate"></i>My Certificates</h2>
     <div class="row">
         <div class="col-md-3"><a href="images/CBAP certificate nour.pdf" target="_blank" class="btn btn-outline-primary">CBAP Certificate</a></div>
@@ -116,10 +495,14 @@
     </div>
 </section>
 
-<section id="testimonials" class="container py-5 text-center">
+<!-- <section id="testimonials" class="container py-5 text-center" data-aos="fade-up">
     <h2><i class="fas fa-comment-dots"></i>What My Students Say</h2>
     <div id="testimonial-text">"Code with Nour helped me land my first real-world project!"</div>
-</section>
+</section> -->
+
+
+
+<!-- ✅ STEP 16: Interactivity Script -->
 <script>
 const testimonials = [
     '"Code with Nour helped me land my first real-world project!"',
@@ -133,7 +516,7 @@ setInterval(() => {
 }, 4000);
 </script>
 
-<section id="contact" class="container py-5 text-center">
+<section id="contact" class="container py-5 text-center" data-aos="fade-up">
     <h2><i class="fas fa-envelope"></i>Contact Me</h2>
     <form action="https://formspree.io/f/myzwbodd" method="POST">
         <input type="text" name="name" placeholder="Your Name" required class="form-control mb-2">
@@ -143,7 +526,16 @@ setInterval(() => {
     </form>
 </section>
 
+<!-- ✅ Floating Social Media Bar -->
+<div class="floating-social">
+    <a href="https://www.instagram.com/nourabulnasrr/" target="_blank"><i class="fab fa-instagram" style="color:#cc39a4"></i></a>
+    <a href="https://x.com/nabulnasr72" target="_blank"><i class="fab fa-twitter" style="color:#03A9F4"></i></a>
+    <a href="https://github.com/nourabulnasr" target="_blank"><i class="fab fa-github" style="color:black"></i></a>
+    <a href="https://discord.com/" target="_blank"><i class="fab fa-discord" style="color:#8c9eff"></i></a>
+</div>
 
+
+<!-- WhatsApp Bubble -->
 <a href="https://wa.me/201069046666" 
    style="position:fixed;width:60px;height:60px;bottom:40px;right:40px;
           background:#25D366;color:#FFF;border-radius:50px;text-align:center;
@@ -151,7 +543,72 @@ setInterval(() => {
     <i style="margin-top:16px;" class="fab fa-whatsapp"></i>
 </a>
 
+<!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    once: true
+  });
+
+const counters = document.querySelectorAll('.counter');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const counter = entry.target;
+      const target = +counter.getAttribute('data-target');
+      let count = 0;
+      const increment = target > 5 ? Math.ceil(target / 100) : 0.1;
+
+      const update = () => {
+        count += increment;
+        if (count >= target) {
+          counter.innerText = target;
+        } else {
+          counter.innerText = Math.round(count * 10) / 10;
+          requestAnimationFrame(update);
+        }
+      };
+      update();
+      observer.unobserve(counter);
+    }
+  });
+}, {
+  threshold: 0.6
+});
+
+counters.forEach(counter => observer.observe(counter));
+
+
+// Preloader fade out
+window.addEventListener("load", function () {
+  const preloader = document.getElementById("preloader");
+  preloader.style.transition = "opacity 0.5s ease";
+  preloader.style.opacity = "0";
+  setTimeout(() => {
+    preloader.style.display = "none";
+  }, 500);
+});
+
+
+
+</script>
+
+
+
+
+<footer class="footer text-center py-4">
+  <div class="container">
+    <p class="mb-1">&copy; 2025 Code with Nour. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="#hero">Home</a> |
+      <a href="#services">Services</a> |
+      <a href="#projects">Projects</a> |
+      <a href="#contact">Contact</a>
+    </div>
+    
+  </div>
+</footer>
 </body>
 </html>
-
